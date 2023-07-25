@@ -7,7 +7,7 @@ import { BsCartCheck } from 'react-icons/bs';
 const Navbar = () => {
     const [state, setState] = useState(false);
   return (
-    <header className="text-base lg:text-sm z-50">
+    <header className="text-base lg:text-sm z-50 sticky">
         <div className="bg-white items-center justify-between gap-x-14 px-4 max-w-screen-xl mx-auto lg:flex lg:px-8 lg:static">
         <Link href="/">Home</Link>
         <Link href="/">Home</Link>
@@ -63,7 +63,7 @@ const Navbar = () => {
             state ? "" : "hidden"
           }`}
         >
-          <ul className="items-center space-y-6 lg:flex lg:space-x-6 lg:space-y-0 z-auto">
+          <ul className="items-center space-y-6 lg:flex lg:space-x-6 lg:space-y-0 z-20">
             <form
               onSubmit={(e) => e.preventDefault()}
               className="flex-1 items-center justify-start pb-4 lg:flex lg:pb-0"
