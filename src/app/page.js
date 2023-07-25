@@ -39,7 +39,7 @@ export default function Home() {
               <Swipe
                 onSwipeLeft={handleNextSlide}
                 onSwipeRight={handlePrevSlide}
-                className="relative  w-full h-full"
+                className="relative m-auto"
               >
                 {images.map((image, index) => {
                   if (index === currentSlide) {
@@ -147,20 +147,20 @@ export default function Home() {
             </div>
             <p class="ml-2 text-sm font-medium text-gray-500">1,209 Reviews</p>
           </div>
-          <p class="sm: text-lg font-bold text-gray-900 sm:text-xl">
+          <p class="lg:text-md font-normal text-gray-900 mt-5">
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Amet odit
             dicta culpa quas inventore beatae repellendus molestias aliquid non,
             sapiente modi, libero ex voluptatem sit ad explicabo! Amet vero
             optio veritatis id a nam excepturi aspernatur, iusto aliquid, eius
             molestias!
           </p>
-          <div class="flex rounded-full overflow-hidden my-4 select-none text-gray-900">
+          <div class="flex rounded-full items-center my-4 select-none text-gray-900">
             <div class="title py-3 my-auto mr-4  text-gray-900 text-xl font-semibold ">
               Color:
             </div>
             <label class="flex items-center radio p-2 cursor-pointer">
               <input
-                class="h-6 w-6 checked:bg-red-500 text-red-500 p-3 my-4"
+                class="h-6 w-6 checked:bg-red-500 text-red-500 p-2 my-4"
                 type="radio"
                 name="sfg"
               />
@@ -169,7 +169,7 @@ export default function Home() {
 
             <label class="flex items-center p-2 cursor-pointer">
               <input
-                class="h-6 w-6 checked:bg-green-500 text-green-500 p-3 my-4"
+                class="h-6 w-6 checked:bg-green-500 text-green-500 p-2 my-4"
                 type="radio"
                 name="sfg"
               />
@@ -178,33 +178,29 @@ export default function Home() {
 
             <label class="flex items-center p-2 cursor-pointer">
               <input
-                class="h-6 w-6 checked:bg-blue-500 text-blue-500 p-3 my-4"
+                class="h-6 w-6 checked:bg-blue-500 text-blue-500 p-2 my-4"
                 type="radio"
                 name="sfg"
               />
               <div class="title px-2">Blue</div>
             </label>
-          </div>
-          <div className="w-1/2">
-            <label
-              for="size"
-              class="block mb-2 text-sm font-medium text-gray-900 dark:text-white"
-            >
-              Select a size
-            </label>
+            <div className="">
+            
             <select
               id="countries"
               class="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
             >
-              <option selected>Choose a Size</option>
-              <option value="S">S</option>
+              <option >Choose a Size</option>
+              <option value="S" selected>S</option>
               <option value="M">M</option>
               <option value="L">L</option>
               <option value="XL">XL</option>
             </select>
           </div>
+          </div>
+         
           <div className="my-6 flex justify-start gap-10 items-center">
-            <p className="text-3xl flex items-center gap-3 font-semibold">
+            <p className="lg:text-3xl text-xl flex items-center gap-3 font-semibold">
               <ImPriceTags />
               549 ৳
             </p>

@@ -7,15 +7,17 @@ import { BsCartCheck } from 'react-icons/bs';
 const Navbar = () => {
     const [state, setState] = useState(false);
   return (
-    <header className="text-base lg:text-sm z-50 sticky">
-        <div className="bg-white items-center justify-between gap-x-14 px-4 max-w-screen-xl mx-auto lg:flex lg:px-8 lg:static">
+    <header className="text-base lg:text-sm z-50 sticky top-0">
+        <div className="fixed w-full mx-auto">
+        <div className="bg-white items-center justify-center gap-x-14 w-[1280px] mx-auto lg:flex lg:px-8 h-8">
         <Link href="/">Home</Link>
         <Link href="/">Home</Link>
         <Link href="/">Home</Link>
       </div>
+        </div>
       <div
-        className={`bg-white items-center gap-x-14 px-4 max-w-screen-xl mx-auto lg:flex lg:px-8 lg:static ${
-          state ? "h-full fixed inset-x-0" : ""
+        className={`bg-white pt-8 items-center gap-x-14 px-4 max-w-screen-xl mx-auto lg:flex lg:px-8 lg:static ${
+          state ? "h-[90vh] mt-8 fixed inset-x-0" : ""
         }`}
       >
         
@@ -128,7 +130,7 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      <nav className="border-b">
+      <nav className="border-b bg-white">
         <ul className="flex items-center gap-x-3 max-w-screen-xl mx-auto px-4 overflow-x-auto lg:px-8">
           <li className="py-1  border-b-2 border-indigo-600">
             <Link
