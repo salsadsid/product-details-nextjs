@@ -8,11 +8,17 @@ const Navbar = () => {
     const [state, setState] = useState(false);
   return (
     <header className="text-base lg:text-sm z-50">
+        <div className="bg-white items-center justify-between gap-x-14 px-4 max-w-screen-xl mx-auto lg:flex lg:px-8 lg:static">
+        <Link href="/">Home</Link>
+        <Link href="/">Home</Link>
+        <Link href="/">Home</Link>
+      </div>
       <div
         className={`bg-white items-center gap-x-14 px-4 max-w-screen-xl mx-auto lg:flex lg:px-8 lg:static ${
           state ? "h-full fixed inset-x-0" : ""
         }`}
       >
+        
         <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
           <Link href="/" className="font-6xl font-extrabold">
             salX
@@ -87,25 +93,25 @@ const Navbar = () => {
             <li>
               <Link
                 href="/"
-                className="block text-gray-700 hover:text-gray-900"
+                className="lg:block lg:text-lg flex gap-2 justify-center items-center text-gray-700 hover:text-gray-900"
               >
-               <GrFavorite/>
+               <GrFavorite/> <span className="lg:hidden inline-block ">Add to Wishlist</span>
               </Link>
             </li>
             <li>
               <Link
                 href="/"
-                className="block text-gray-700 hover:text-gray-900"
+                className="lg:block lg:text-lg flex gap-2 justify-center items-center  text-gray-700 hover:text-gray-900"
               >
 
-                <BsCartCheck/>
+                <BsCartCheck/><span className="lg:hidden inline-block ">Add to Cart</span>
               </Link>
             </li>
             <li>
               {" "}
               <Link
                 href="/"
-                className="block text-gray-700 hover:text-gray-900"
+                className="lg:block flex justify-center items-center  text-gray-700 hover:text-gray-900"
               >
                 Login
               </Link>
@@ -113,7 +119,7 @@ const Navbar = () => {
             <li>
               <Link
                 href="/"
-                className=" block text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center mr-2 mb-2"
+                className=" block text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               >
                 
                 Sign Up
@@ -122,7 +128,34 @@ const Navbar = () => {
           </ul>
         </div>
       </div>
-      
+      <nav className="border-b">
+        <ul className="flex items-center gap-x-3 max-w-screen-xl mx-auto px-4 overflow-x-auto lg:px-8">
+          <li className="py-1  border-b-2 border-indigo-600">
+            <Link
+              href="/"
+              className="block py-2 px-3 rounded-lg text-gray-700 hover:text-gray-900 hover:bg-gray-100 duration-150"
+            >
+              Men
+            </Link>
+          </li>
+          <li className="py-1  ">
+            <Link
+              href="/"
+              className="block py-2 px-3 rounded-lg text-gray-700 hover:text-gray-900 hover:bg-gray-100 duration-150"
+            >
+              Women
+            </Link>
+          </li>
+          <li className="py-1  ">
+            <Link
+              href="/"
+              className="block py-2 px-3 rounded-lg text-gray-700 hover:text-gray-900 hover:bg-gray-100 duration-150"
+            >
+              Men
+            </Link>
+          </li>
+        </ul>
+      </nav>
     </header>
   )
 }
