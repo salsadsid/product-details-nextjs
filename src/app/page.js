@@ -10,7 +10,7 @@ export default function Home() {
         Step Up Your Style 
           <span className="text-indigo-700"> Game with salX!</span>
         </h1>
-        <p className="mt-5 sm:mt-10 lg:w-10/12 text-gray-400 font-normal text-center text-sm sm:text-lg">Upgrade Your Wardrobe with Stylish Men's T-shirts, Women's T-shirts, and Cute Baby Pants - Start Shopping!</p>
+        <p className="mt-5 sm:mt-10 lg:w-10/12 text-gray-400 font-normal text-center text-sm sm:text-lg">Upgrade Your Wardrobe with Stylish Men&rsquo;s T-shirts, Women&rsquo;s T-shirts, and Cute Baby Pants - Start Shopping!</p>
       </div>
       <div className="flex justify-center items-center">
         <Link href="/category" className="focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-700 bg-indigo-700 transition duration-150 ease-in-out hover:bg-indigo-600 lg:text-xl lg:font-bold  rounded text-white px-4 sm:px-10 border border-indigo-700 py-2 sm:py-4 text-sm">Get Started</Link>
