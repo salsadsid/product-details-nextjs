@@ -16,6 +16,18 @@ export default function Home() {
       src: "/pexels-photo-313782.jpg",
       id: 2,
     },
+    {
+      src: "/tshirt-red.jpg",
+      id: 2,
+    },
+    {
+      src: "/tshirt-green.jpg",
+      id: 2,
+    },
+    {
+      src: "/tshirt-blue.jpg",
+      id: 2,
+    },
   ];
   const handleNextSlide = () => {
     let newSlide = currentSlide === images.length - 1 ? 0 : currentSlide + 1;

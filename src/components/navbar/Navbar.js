@@ -1,26 +1,28 @@
 "use client";
 import Link from "next/link";
 import { useState } from "react";
-import { GrFavorite } from 'react-icons/gr';
-import { BsCartCheck } from 'react-icons/bs';
+import { GrFavorite } from "react-icons/gr";
+import { BsCartCheck } from "react-icons/bs";
+import { usePathname } from "next/navigation";
 
 const Navbar = () => {
-    const [state, setState] = useState(false);
+  const [state, setState] = useState(false);
+  const path = usePathname();
+  // console.log(router);
   return (
     <header className="text-base lg:text-sm z-50 sticky top-0">
-        <div className="fixed w-full mx-auto">
+      <div className="fixed w-full mx-auto">
         <div className="bg-white items-center justify-center gap-x-14 w-[1280px] mx-auto lg:flex lg:px-8 h-8">
-        <Link href="/">Home</Link>
-        <Link href="/">Home</Link>
-        <Link href="/">Home</Link>
-      </div>
+          <Link href="/">Home</Link>
+          <Link href="/">Home</Link>
+          <Link href="/">Home</Link>
         </div>
+      </div>
       <div
         className={`bg-white pt-8 items-center gap-x-14 px-4 max-w-screen-xl mx-auto lg:flex lg:px-8 lg:static ${
           state ? "h-[90vh] mt-8 fixed inset-x-0" : ""
         }`}
       >
-        
         <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
           <Link href="/" className="font-6xl font-extrabold">
             salX
@@ -97,7 +99,8 @@ const Navbar = () => {
                 href="/"
                 className="lg:block lg:text-lg flex gap-2 justify-center items-center text-gray-700 hover:text-gray-900"
               >
-               <GrFavorite/> <span className="lg:hidden inline-block ">Add to Wishlist</span>
+                <GrFavorite />{" "}
+                <span className="lg:hidden inline-block ">Add to Wishlist</span>
               </Link>
             </li>
             <li>
@@ -105,8 +108,8 @@ const Navbar = () => {
                 href="/"
                 className="lg:block lg:text-lg flex gap-2 justify-center items-center  text-gray-700 hover:text-gray-900"
               >
-
-                <BsCartCheck/><span className="lg:hidden inline-block ">Add to Cart</span>
+                <BsCartCheck />
+                <span className="lg:hidden inline-block ">Add to Cart</span>
               </Link>
             </li>
             <li>
@@ -123,7 +126,6 @@ const Navbar = () => {
                 href="/"
                 className=" block text-white bg-gradient-to-br from-purple-600 to-blue-500 hover:bg-gradient-to-bl focus:ring-4 focus:outline-none focus:ring-blue-300 dark:focus:ring-blue-800 font-medium rounded-lg text-sm px-5 py-2.5 text-center"
               >
-                
                 Sign Up
               </Link>
             </li>
@@ -132,34 +134,46 @@ const Navbar = () => {
       </div>
       <nav className="border-b bg-white">
         <ul className="flex items-center gap-x-3 max-w-screen-xl mx-auto px-4 overflow-x-auto lg:px-8">
-          <li className="py-1  border-b-2 border-indigo-600">
+          <li
+            className={`py-1 ${
+              path.includes("category/men") ? "border-b-2 border-indigo-600" : ""
+            } `}
+          >
             <Link
-              href="/"
+              href="/category/men"
               className="block py-2 px-3 rounded-lg text-gray-700 hover:text-gray-900 hover:bg-gray-100 duration-150"
             >
               Men
             </Link>
           </li>
-          <li className="py-1  ">
+          <li
+            className={`py-1 ${
+              path.includes("women") ? "border-b-2 border-indigo-600" : ""
+            }  `}
+          >
             <Link
-              href="/"
+              href="/category/women"
               className="block py-2 px-3 rounded-lg text-gray-700 hover:text-gray-900 hover:bg-gray-100 duration-150"
             >
               Women
             </Link>
           </li>
-          <li className="py-1  ">
+          <li
+            className={`py-1 ${
+              path.includes("baby") ? "border-b-2 border-indigo-600" : ""
+            }  `}
+          >
             <Link
-              href="/"
+              href="/category/baby"
               className="block py-2 px-3 rounded-lg text-gray-700 hover:text-gray-900 hover:bg-gray-100 duration-150"
             >
-              Men
+              Baby
             </Link>
           </li>
         </ul>
       </nav>
     </header>
-  )
-}
+  );
+};
 
-export default Navbar
+export default Navbar;
