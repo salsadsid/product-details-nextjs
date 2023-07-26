@@ -1,11 +1,13 @@
 "use client"
 
+import ProductCard from '@/components/productCard/ProductCard';
+import Image from 'next/image';
 import React, { useEffect, useState } from 'react'
 
 const Men = () => {
     const [allProducts, setAllProducts] = useState([]);
     const fetchProducts = async () => {
-      const response = await fetch("/api/product");
+      const response = await fetch(`/api/product/men`);
       const data = await response.json();
       console.log(data)
       setAllProducts(data);
@@ -16,7 +18,11 @@ const Men = () => {
     }, []);
     console.log(allProducts);
   return (
-    <div>Men</div>
+   <div className='flex justify-center items-center gap-5 mt-8 flex'>
+    {
+        allProducts?.map(product=><ProductCard  key={product._id} product={product}></ProductCard>)
+    }
+   </div>
   )
 }
 

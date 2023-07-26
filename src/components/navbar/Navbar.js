@@ -136,6 +136,18 @@ const Navbar = () => {
         <ul className="flex items-center gap-x-3 max-w-screen-xl mx-auto px-4 overflow-x-auto lg:px-8">
           <li
             className={`py-1 ${
+            /category$/g.test(path) ? "border-b-2 border-indigo-600" : ""
+            } `}
+          >
+            <Link
+              href="/category"
+              className="block py-2 px-3 rounded-lg text-gray-700 hover:text-gray-900 hover:bg-gray-100 duration-150"
+            >
+              All
+            </Link>
+          </li>
+          <li
+            className={`py-1 ${
               path.includes("category/men") ? "border-b-2 border-indigo-600" : ""
             } `}
           >
