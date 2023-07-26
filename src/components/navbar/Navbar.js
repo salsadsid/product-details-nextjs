@@ -13,10 +13,16 @@ const Navbar = () => {
   return (
     <header className="text-base bg-white lg:text-sm z-50 sticky top-0">
       <div className="fixed w-full mx-auto">
-        <div className="bg-white items-center justify-center gap-x-14 w-[1280px] mx-auto lg:flex lg:px-8 h-8">
-          <Link href="/">Home</Link>
-          <Link href="/">Home</Link>
-          <Link href="/">Home</Link>
+        <div className="bg-white items-center justify-center gap-x-14 lg:w-[1280px] mx-auto flex  lg:px-8 h-8">
+          <Link href="/" className="px-3  py-2 hover:bg-gray-100 rounded-lg">
+            Home
+          </Link>
+          <Link href="/" className="px-3  py-2 hover:bg-gray-100 rounded-lg">
+            About
+          </Link>
+          <Link href="/" className="px-3  py-2 hover:bg-gray-100 rounded-lg">
+            Contact Us
+          </Link>
         </div>
       </div>
       <div
@@ -26,7 +32,7 @@ const Navbar = () => {
       >
         <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
           <Link href="/" className="font-6xl font-extrabold">
-           <Image src="/logo.png" width={120} height={52} alt="logo"/>
+            <Image src="/logo.png" width={120} height={52} alt="logo" />
           </Link>
           <div className="lg:hidden">
             <button
@@ -95,29 +101,29 @@ const Navbar = () => {
                 />
               </div>
             </form>
-            <li>
+            <li className="hover:bg-gray-100 rounded-lg">
               <Link
                 href="/"
-                className="lg:block lg:text-lg flex gap-2 justify-center items-center text-gray-700 hover:text-gray-900"
+                className="lg:block lg:text-lg flex gap-2 justify-center items-center text-gray-700 hover:text-gray-900 px-3  py-2"
               >
                 <GrFavorite />{" "}
                 <span className="lg:hidden inline-block ">Add to Wishlist</span>
               </Link>
             </li>
-            <li>
+            <li className="hover:bg-gray-100 rounded-lg">
               <Link
                 href="/"
-                className="lg:block lg:text-lg flex gap-2 justify-center items-center  text-gray-700 hover:text-gray-900"
+                className="lg:block lg:text-lg flex gap-2 justify-center items-center  text-gray-700 hover:text-gray-900 px-3  py-2"
               >
                 <BsCartCheck />
                 <span className="lg:hidden inline-block ">Add to Cart</span>
               </Link>
             </li>
-            <li>
+            <li className="hover:bg-gray-100 rounded-lg">
               {" "}
               <Link
                 href="/"
-                className="lg:block flex justify-center items-center  text-gray-700 hover:text-gray-900"
+                className="lg:block flex justify-center items-center  text-gray-700 hover:text-gray-900 px-3 text-sm py-2"
               >
                 Login
               </Link>
@@ -137,7 +143,7 @@ const Navbar = () => {
         <ul className="flex items-center gap-x-3 max-w-screen-xl mx-auto px-4 overflow-x-auto lg:px-8">
           <li
             className={`py-1 ${
-            /category$/g.test(path) ? "border-b-2 border-indigo-600" : ""
+              /category$/g.test(path) ? "border-b-2 border-indigo-600" : ""
             } `}
           >
             <Link
@@ -149,7 +155,9 @@ const Navbar = () => {
           </li>
           <li
             className={`py-1 ${
-              path.includes("category/men") ? "border-b-2 border-indigo-600" : ""
+              path.includes("category/men")
+                ? "border-b-2 border-indigo-600"
+                : ""
             } `}
           >
             <Link
