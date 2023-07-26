@@ -10,7 +10,7 @@ import InnerImageZoom from "react-inner-image-zoom";
 const Product = ({params}) => {
     const [allProduct, setAllProduct] = useState([]);
     const fetchProducts = async () => {
-      const response = await fetch(`/api/product/men/${params.product}`);
+      const response = await fetch(`/api/product/women/${params.product}`);
       const data = await response.json();
       console.log(data)
       setAllProduct(data);

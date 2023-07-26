@@ -4,13 +4,14 @@ import { useState } from "react";
 import { GrFavorite } from "react-icons/gr";
 import { BsCartCheck } from "react-icons/bs";
 import { usePathname } from "next/navigation";
+import Image from "next/image";
 
 const Navbar = () => {
   const [state, setState] = useState(false);
   const path = usePathname();
   // console.log(router);
   return (
-    <header className="text-base lg:text-sm z-50 sticky top-0">
+    <header className="text-base bg-white lg:text-sm z-50 sticky top-0">
       <div className="fixed w-full mx-auto">
         <div className="bg-white items-center justify-center gap-x-14 w-[1280px] mx-auto lg:flex lg:px-8 h-8">
           <Link href="/">Home</Link>
@@ -25,7 +26,7 @@ const Navbar = () => {
       >
         <div className="flex items-center justify-between py-3 lg:py-5 lg:block">
           <Link href="/" className="font-6xl font-extrabold">
-            salX
+           <Image src="/logo.png" width={120} height={52} alt="logo"/>
           </Link>
           <div className="lg:hidden">
             <button
